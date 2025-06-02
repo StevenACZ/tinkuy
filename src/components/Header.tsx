@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu } from 'lucide-react';
+
+import logo from '/assets/logos/logo-full.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,11 +11,7 @@ const Header = () => {
     <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
       <div className="container mx-auto px-4 lg:px-6 h-16 flex items-center justify-between">
         <div className="flex items-center space-x-2">
-          <img
-            src="/assets/images/course-features.png"
-            alt="Tinkuy Logo"
-            className="h-10 w-auto"
-          />
+          <img src={logo} alt="Tinkuy Logo" className="h-10 w-auto" />
         </div>
 
         <nav className="hidden md:flex items-center space-x-8">
