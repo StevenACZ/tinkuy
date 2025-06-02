@@ -26,7 +26,7 @@ const Header = () => {
 
         <nav className="hidden md:flex items-center space-x-8">
           <a
-            href="#cursos"
+            href="#courses-catalog"
             onClick={handleSmoothScroll}
             className="text-gray-600 hover:text-tinkuy-purple transition-colors"
           >

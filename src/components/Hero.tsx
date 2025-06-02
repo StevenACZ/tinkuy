@@ -10,7 +10,15 @@ const Hero = () => {
     e.preventDefault();
     const catalogSection = document.getElementById('courses-catalog');
     if (catalogSection) {
-      catalogSection.scrollIntoView({ behavior: 'smooth' });
+      const headerHeight = 64; // altura del header fijo
+      const elementPosition = catalogSection.getBoundingClientRect().top;
+      const offsetPosition =
+        elementPosition + window.pageYOffset - headerHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
     }
   };
 
@@ -18,7 +26,15 @@ const Hero = () => {
     e.preventDefault();
     const howItWorksSection = document.getElementById('como-funciona');
     if (howItWorksSection) {
-      howItWorksSection.scrollIntoView({ behavior: 'smooth' });
+      const headerHeight = 64;
+      const elementPosition = howItWorksSection.getBoundingClientRect().top;
+      const offsetPosition =
+        elementPosition + window.pageYOffset - headerHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
     }
   };
 
