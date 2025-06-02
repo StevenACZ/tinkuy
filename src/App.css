@@ -1,0 +1,41 @@
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 1280px;
+}
+
+/* Gradients */
+.bg-gradient {
+  background: linear-gradient(135deg, #7c3aed 0%, #06b6d4 100%);
+}
+
+/* Hero section */
+.hero-background {
+  will-change: transform;
+  transition: transform 0.3s ease-out;
+}
+
+/* Animations */
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
