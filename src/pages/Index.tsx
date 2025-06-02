@@ -9,6 +9,7 @@ import Testimonials from '@/components/Testimonials';
 import FAQ from '@/components/FAQ';
 import CTA from '@/components/CTA';
 import Footer from '@/components/Footer';
+import { ScrollToTop } from '@/components/ui/scroll-to-top';
 
 const Index = () => {
   return (
@@ -24,6 +25,7 @@ const Index = () => {
       <FAQ />
       <CTA />
       <Footer />
+      <ScrollToTop />
     </div>
   );
 };
