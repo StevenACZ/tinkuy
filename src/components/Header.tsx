@@ -7,6 +7,16 @@ import logo from '/assets/logos/logo-full.png';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const href = e.currentTarget.getAttribute('href');
+    if (!href) return;
+
+    const targetId = href.replace('#', '');
+    const element = document.getElementById(targetId);
+    element?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
       <div className="container mx-auto px-4 lg:px-6 h-16 flex items-center justify-between">
@@ -17,24 +27,28 @@ const Header = () => {
         <nav className="hidden md:flex items-center space-x-8">
           <a
             href="#cursos"
+            onClick={handleSmoothScroll}
             className="text-gray-600 hover:text-tinkuy-purple transition-colors"
           >
             Cursos
           </a>
           <a
             href="#como-funciona"
+            onClick={handleSmoothScroll}
             className="text-gray-600 hover:text-tinkuy-purple transition-colors"
           >
             Cómo funciona
           </a>
           <a
             href="#preguntas"
+            onClick={handleSmoothScroll}
             className="text-gray-600 hover:text-tinkuy-purple transition-colors"
           >
             FAQ
           </a>
           <a
             href="#contacto"
+            onClick={handleSmoothScroll}
             className="text-gray-600 hover:text-tinkuy-purple transition-colors"
           >
             Contacto
@@ -64,16 +78,32 @@ const Header = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-white border-t border-gray-100 p-4">
           <nav className="flex flex-col space-y-4">
-            <a href="#cursos" className="text-gray-600">
+            <a
+              href="#cursos"
+              onClick={handleSmoothScroll}
+              className="text-gray-600"
+            >
               Cursos
             </a>
-            <a href="#como-funciona" className="text-gray-600">
+            <a
+              href="#como-funciona"
+              onClick={handleSmoothScroll}
+              className="text-gray-600"
+            >
               Cómo funciona
             </a>
-            <a href="#preguntas" className="text-gray-600">
+            <a
+              href="#preguntas"
+              onClick={handleSmoothScroll}
+              className="text-gray-600"
+            >
               FAQ
             </a>
-            <a href="#contacto" className="text-gray-600">
+            <a
+              href="#contacto"
+              onClick={handleSmoothScroll}
+              className="text-gray-600"
+            >
               Contacto
             </a>
             <div className="flex flex-col space-y-2 pt-4">
