@@ -3,6 +3,8 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, Star } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
+import background from '/assets/images/course-hero.png';
+
 const Hero = () => {
   const scrollToCatalog = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
@@ -43,7 +45,7 @@ const Hero = () => {
       <div
         className="hero-background absolute inset-0 z-0 scale-110"
         style={{
-          backgroundImage: `url('/assets/images/course-hero.png')`,
+          backgroundImage: `url(${background})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
