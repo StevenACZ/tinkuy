@@ -1,5 +1,3 @@
-
-import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { CheckCircle, CreditCard, Bell, Calendar, Shield } from 'lucide-react';
 
@@ -7,29 +5,30 @@ const Benefits = () => {
   const benefits = [
     {
       icon: CheckCircle,
-      title: "Cero filas, cero papeles",
-      description: "Reserva desde tu celu o laptop"
+      title: 'Cero filas, cero papeles',
+      description: 'Reserva desde tu celu o laptop',
     },
     {
       icon: CreditCard,
-      title: "Pagos seguros",
-      description: "Procesamos con Stripe/Yape/Plin y emitimos boleta al instante"
+      title: 'Pagos seguros',
+      description:
+        'Procesamos con Stripe/Yape/Plin y emitimos boleta al instante',
     },
     {
       icon: Bell,
-      title: "Recordatorios inteligentes",
-      description: "Correo y notificaciones antes de cada sesión"
+      title: 'Recordatorios inteligentes',
+      description: 'Correo y notificaciones antes de cada sesión',
     },
     {
       icon: Calendar,
-      title: "Información transparente",
-      description: "Cupos y horarios siempre actualizados"
+      title: 'Información transparente',
+      description: 'Cupos y horarios siempre actualizados',
     },
     {
       icon: Shield,
-      title: "Apoyo al desarrollo local",
-      description: "Clases dictadas en instalaciones municipales certificadas"
-    }
+      title: 'Apoyo al desarrollo local',
+      description: 'Clases dictadas en instalaciones municipales certificadas',
+    },
   ];
 
   return (
@@ -46,8 +45,8 @@ const Benefits = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {benefits.map((benefit, index) => (
-            <Card 
-              key={index} 
+            <Card
+              key={index}
               className="hover:shadow-lg transition-all duration-300 animate-fade-in border-gray-200 hover:border-tinkuy-purple/30"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
@@ -58,9 +57,7 @@ const Benefits = () => {
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   {benefit.title}
                 </h3>
-                <p className="text-gray-600">
-                  {benefit.description}
-                </p>
+                <p className="text-gray-600">{benefit.description}</p>
               </CardContent>
             </Card>
           ))}

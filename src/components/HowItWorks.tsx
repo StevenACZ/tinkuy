@@ -1,5 +1,3 @@
-
-import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Search, Calendar, CreditCard, Star } from 'lucide-react';
 
@@ -7,24 +5,24 @@ const HowItWorks = () => {
   const steps = [
     {
       icon: Search,
-      title: "Explora",
-      description: "Filtra por categoría, día o rango de edad"
+      title: 'Explora',
+      description: 'Filtra por categoría, día o rango de edad',
     },
     {
       icon: Calendar,
-      title: "Reserva tu cupo",
-      description: "Solo necesitas una cuenta y 30 segundos"
+      title: 'Reserva tu cupo',
+      description: 'Solo necesitas una cuenta y 30 segundos',
     },
     {
       icon: CreditCard,
-      title: "Paga online",
-      description: "Elige tarjeta, Yape o Plin; recibe tu boleta al correo"
+      title: 'Paga online',
+      description: 'Elige tarjeta, Yape o Plin; recibe tu boleta al correo',
     },
     {
       icon: Star,
-      title: "Disfruta tu clase",
-      description: "Te enviaremos ubicación, materiales y recordatorios"
-    }
+      title: 'Disfruta tu clase',
+      description: 'Te enviaremos ubicación, materiales y recordatorios',
+    },
   ];
 
   return (
@@ -42,7 +40,7 @@ const HowItWorks = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto relative">
           {steps.map((step, index) => (
             <div key={index} className="relative">
-              <Card 
+              <Card
                 className="text-center hover:shadow-lg transition-all duration-300 animate-fade-in h-full"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
@@ -56,12 +54,10 @@ const HowItWorks = () => {
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">
                     {step.title}
                   </h3>
-                  <p className="text-gray-600">
-                    {step.description}
-                  </p>
+                  <p className="text-gray-600">{step.description}</p>
                 </CardContent>
               </Card>
-              
+
               {index < steps.length - 1 && (
                 <div className="hidden lg:block absolute top-1/2 -right-3 w-6 h-0.5 bg-gradient-to-r from-tinkuy-purple to-tinkuy-turquoise transform -translate-y-1/2 z-10"></div>
               )}

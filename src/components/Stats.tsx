@@ -1,24 +1,21 @@
-
-import React from 'react';
-
 const Stats = () => {
   const stats = [
     {
-      number: "1,500+",
-      label: "vecinos registrados en el piloto"
+      number: '1,500+',
+      label: 'vecinos registrados en el piloto',
     },
     {
-      number: "98%",
-      label: "de satisfacción en encuestas"
+      number: '98%',
+      label: 'de satisfacción en encuestas',
     },
     {
-      number: "<3s",
-      label: "tiempo de carga promedio"
+      number: '<3s',
+      label: 'tiempo de carga promedio',
     },
     {
-      number: "50+",
-      label: "cursos disponibles"
-    }
+      number: '50+',
+      label: 'cursos disponibles',
+    },
   ];
 
   return (
@@ -35,8 +32,8 @@ const Stats = () => {
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
           {stats.map((stat, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="text-center animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >

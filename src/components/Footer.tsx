@@ -1,5 +1,6 @@
-import React from 'react';
 import { Facebook, Instagram, X, Mail, Phone, MapPin } from 'lucide-react';
+
+import logo from '/assets/logos/logo-full.png';
 
 const Footer = () => {
   return (
@@ -9,7 +10,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <img
-                src="/assets/images/course-features.png"
+                src={logo}
                 alt="Tinkuy Logo"
                 className="h-8 w-auto brightness-0 invert"
               />

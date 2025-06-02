@@ -1,28 +1,29 @@
-
-import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Star } from 'lucide-react';
 
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Ana G.",
-      role: "Madre de familia",
-      content: "Nunca había sido tan fácil inscribir a mis hijos en natación; pagué con Yape y me llegó la boleta al toque.",
-      rating: 5
+      name: 'Ana G.',
+      role: 'Madre de familia',
+      content:
+        'Nunca había sido tan fácil inscribir a mis hijos en natación; pagué con Yape y me llegó la boleta al toque.',
+      rating: 5,
     },
     {
-      name: "Sensei Luis C.",
-      role: "Instructor de Karate",
-      content: "Publicar mis talleres de Karate es cuestión de minutos; veo quién pagó y quién no, todo en mi panel.",
-      rating: 5
+      name: 'Sensei Luis C.',
+      role: 'Instructor de Karate',
+      content:
+        'Publicar mis talleres de Karate es cuestión de minutos; veo quién pagó y quién no, todo en mi panel.',
+      rating: 5,
     },
     {
-      name: "María R.",
-      role: "Estudiante de arte",
-      content: "Los recordatorios automáticos me salvaron varias veces. Ya no me pierdo ninguna clase de acuarela.",
-      rating: 5
-    }
+      name: 'María R.',
+      role: 'Estudiante de arte',
+      content:
+        'Los recordatorios automáticos me salvaron varias veces. Ya no me pierdo ninguna clase de acuarela.',
+      rating: 5,
+    },
   ];
 
   return (
@@ -39,8 +40,8 @@ const Testimonials = () => {
 
         <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {testimonials.map((testimonial, index) => (
-            <Card 
-              key={index} 
+            <Card
+              key={index}
               className="hover:shadow-lg transition-all duration-300 animate-fade-in"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
@@ -50,11 +51,11 @@ const Testimonials = () => {
                     <Star key={i} className="h-4 w-4 fill-current" />
                   ))}
                 </div>
-                
+
                 <p className="text-gray-700 mb-4 italic">
                   "{testimonial.content}"
                 </p>
-                
+
                 <div>
                   <div className="font-semibold text-gray-900">
                     {testimonial.name}
