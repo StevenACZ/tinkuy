@@ -6,7 +6,7 @@ import path from 'path';
 const repoName = 'tinkuy';
 
 export default defineConfig({
-  base: `/${repoName}/`, // ← Agrega esta línea
+  base: `/${repoName}`, // ← Agrega esta línea
   server: {
     host: '::',
     port: 8080,
